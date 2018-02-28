@@ -13,9 +13,9 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  
+
   loading: { color: '#3B8070' },
-  
+
   build: {
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
@@ -26,13 +26,12 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      vendor: ['vue-particles']
     }
   },
 
-  loading: '~/components/loading.vue',
-
   plugins: [
-    { src: '@/plugins/vue-particles', ssr: false, process.server: true }
+    { src: '~plugins/vue-particles.js', ssr: false }
   ],
 
   css: [

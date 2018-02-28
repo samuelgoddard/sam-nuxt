@@ -1,7 +1,9 @@
 <template>
   <div>
     <Header/>
-    <Particle/>
+    <no-ssr>
+      <vue-particles/>
+    </no-ssr>
     <nuxt/>
     <Footer/>
   </div>
@@ -10,14 +12,12 @@
 <script>
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
-import Particle from '~/components/Particle'
 
 
 export default {
-  components: { 
+  components: {
     Header,
-    Footer,
-    Particle
+    Footer
   }
 }
 </script>
